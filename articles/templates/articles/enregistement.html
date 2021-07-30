@@ -1,0 +1,40 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+ 
+    <title>MINISTERE DE L'EDUCATION NATIONAL ET DE L'ENSEIGNEMENT TECHNIQUE</title>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-dark justify-content-between">
+        <a class="navbar-brand">E-article</a>
+        <a href="{% url 'index' %}"> acceuil</a>
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </nav>
+
+    <div class="container text-center mt-5"> 
+        <hr>
+        <form method="POST">
+            {% csrf_token %}
+            <label for="article">nom du article:</label><input required type ="text" id="article " name="nom-articles" ><br><br>
+            <label for="Batch">Code barre article:</label><input required type ="text" id="Batch " name="Batch-number" ><br><br>
+            <label for="comment">commentaire:</label><input required type ="text" id="comment " name="com-articles" ><br><br>
+            <label for="image">image:</label><input required type ="file"  name="img-articles" ><br><br><br><br>
+            <button class="btn btn-primary ">cree article</button>
+
+        </form>
+    </div>
+    <div class="mt-5 container">
+        <div class="row">
+            {% for article in articls %}
+            <div class="col-sm-4">
+                <img src ="{{ article.barcode }}" class="img-fluid">
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
