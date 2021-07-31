@@ -22,12 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'laq5ihxyziqax87cpzh5dil8@1crums$cftn&ala*_^hl#&h+k'
+SECRET_KEY = os.environ.get('SECRET_KEY', '-zhV`x0JS\nA H]""\x0bugfCZxs')
 #
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['e_article.herokuapp.com']
+ALLOWED_HOSTS = ['earticle.herokuapp.com']
 
 
 # Application definition
@@ -83,8 +83,8 @@ DATABASES={
       'ENGINE':'django.db.backends.postgresql_psycopg2',
       'NAME':'e_article',
       'USER':'postgres',
-      'PASSWORD':'Gbaneassiatta',
-      'HOST':'localhost',
+      'PASSWORD':'',
+      'HOST':'',
       'PORT':'5432',
    }
 }
@@ -112,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'fr'
 
 TIME_ZONE = 'UTC'
 
