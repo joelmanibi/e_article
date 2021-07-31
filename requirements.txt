@@ -8,3 +8,4 @@ WeasyPrint==52.5
 webencodings==0.5.1
 Werkzeug==1.0.1
 whitenoise==5.3.0
+Django==3.2.5
