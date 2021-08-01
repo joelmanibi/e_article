@@ -396,14 +396,10 @@ var affichageHeure = function(){
 
     // Récupérer la date actuelle : 
     today = new Date();
-	//recuperer div zodiaque
-	var signeZodiaque = document.querySelector(".signeZodiaque")
-	 // declaration tous les signe zodiaques :
-	 var zodiaques =  ["Bélier", "Taureau", "Gémeaux ", "Cancer ", "Lion ", "Vierge ", "Vierge ", "Scorpion ", "Sagittaire ", "Capricorne ", "Verseau ", "Poissons "]
-    // Récupérer l'année : 
+	// declaration tous les signe zodiaques :
+	// Récupérer l'année : 
     annee = today.getFullYear();
-	var indexZodiaque = ["21 mars-20 avril", "21 avril-20 mai", "21 mai-21 juin","22 juin-23 juillet", "24 juillet-23 août","24 août-23 septembre","24 septembre-23 octobre", "24 octobre-22 novembre", "23 novembre-20 décembre", "21 décembre-20 janvier", "21 janvier-19 février", "20 février-20 mars"]
-    //Récupérer le mois : 
+	//Récupérer le mois : 
     listeMois = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
     mois = listeMois[today.getMonth()]; //getMonth() donne l'index 1 comme on est en Février, ce qui donne la valeur "Février" depuis notre liste
 	
@@ -439,9 +435,7 @@ var affichageHeure = function(){
 	
     // Lancer la fonction affichage heure toutes les 1000 ms, soit toute les secondes : 
     setTimeout(affichageHeure, 1000);
-	if (jourNUmero === 26 && listeMois === ""){
-		signeZodiaque.innerHTML = zodiaques[8]
-	}
+	
 }
 
 //Lancer la fonction une fois au début : 
